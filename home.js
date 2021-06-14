@@ -89,7 +89,7 @@ console.log(fruit.split(''));
 //Array
 let fruits=['banana', 'apple', 'orange', 'pineapples'];
 fruits= new Array('banana', 'apple', 'orange', 'pineapples');
-alert(fruits[1]);
+//alert(fruits[1]);
 
 fruits[0]='pear';
 console.log(fruits);
@@ -99,4 +99,78 @@ console.log(fruits[i]);
 }
 
 //array common methods
-console.log
+console.log(fruits.toString());
+console.log(fruits.join('-'));
+console.log(fruits.pop(),fruits); //removes last item
+console.log(fruits.push('blackberry'),fruits); //appends
+console.log(fruits[4]);
+fruits[fruits.length]= 'new fruit'; //same as push
+console.log(fruits);
+fruits.shift(); //removes first element
+console.log(fruits);
+fruits.unshift('kiwi');  //add first element 
+console.log(fruits);
+
+let vegetables= ['asparagus', 'tomatoes', 'broccoli'];
+let allGroceries= fruits.concat(vegetables);
+console.log(allGroceries);
+console.log(allGroceries.slice(1,4));
+console.log(allGroceries.reverse());
+console.log(allGroceries.sort());
+
+let someNumbers= [5, 10, 2, 37, 92, 42, 14,77];
+console.log(someNumbers.sort(function(a,b) {return a-b})); //sorted in ascending order
+console.log(someNumbers.sort(function (a, b) { return b-a })); //sorted in descending order
+
+let emptyArray= new Array();
+for (let num=0; num<=10; num++) {
+    emptyArray.push(num);
+}
+console.log(emptyArray);
+
+//Objects in Javascripts
+//dictionaries in Python
+let student= {first:'Aditi',
+ last:'Singh',
+  age:22,
+   height:170, 
+   studentInfo: function (){
+return this.first + '\n' + this.last + '\n' + this.age;
+}
+};
+//console.log(student.first);
+//student.first='NotAditi'; //change value
+//console.log(student.first);
+student.age++;
+//console.log(student.age);
+console.log(student.studentInfo());
+
+//conditonals, control flows, if else
+var age = 45;
+if ((age>=18) && (age<=35)) {
+    status= 'target demo';
+    console.log(status);
+}
+else {
+    status='not my audience';
+    console.log(status);
+}
+//Switch statements
+//diff between weekday and weekend
+// day 0--> Sunday
+// day 6--> Saturday
+
+switch (2) {
+    case 0:
+    text='Weekend'; 
+    break;
+    case 5:
+    text= 'weekend';
+    break;
+    case 6:
+    text= 'weekend'
+    break;
+    default:
+    text='Weekday';
+}
+console.log(text);
